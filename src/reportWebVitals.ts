@@ -30,7 +30,11 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
     };
 
     const validateMetrics2 = (input: string) => {
-      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS
+      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 2
+    };
+
+    const validateMetrics3 = (input: string) => {
+      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 3
     };
 
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
