@@ -72,3 +72,12 @@ jobs:
     - name: Check dirs
       run: |
         cat ../results/javascript.sarif
+
+    - name: Check SARIF results
+      run: |
+        if grep -q '"results":\[\]' ../results/javascript.sarif; then
+          echo "::error::Security issues found in CodeQL analysis"
+          exit 1
+        else
+          echo "No security issues found"
+        fi
