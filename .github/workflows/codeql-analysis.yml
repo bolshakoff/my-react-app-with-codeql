@@ -71,5 +71,4 @@ jobs:
 
     - name: Check dirs
       run: |
-        ls
-        ls ..
+        ls ../results
