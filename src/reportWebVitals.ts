@@ -25,17 +25,17 @@ const displayMetrics = (metrics: string) => {
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     // Added potential regex DoS
-    const validateMetrics = (input: string) => {
-      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS
-    };
+    // const validateMetrics = (input: string) => {
+    //   return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS
+    // };
 
-    const validateMetrics2 = (input: string) => {
-      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 2
-    };
+    // const validateMetrics2 = (input: string) => {
+    //   return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 2
+    // };
 
-    const validateMetrics3 = (input: string) => {
-      return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 3
-    };
+    // const validateMetrics3 = (input: string) => {
+    //   return /^(.*?)*$/.test(input); // CodeQL should flag ReDoS 3
+    // };
 
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
