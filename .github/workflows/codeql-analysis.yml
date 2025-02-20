@@ -76,8 +76,8 @@ jobs:
     - name: Check SARIF results
       run: |
         if grep -q '"results":\[\]' ../results/javascript.sarif; then
+          echo "No security issues found"
+        else
           echo "::error::Security issues found in CodeQL analysis"
           exit 1
-        else
-          echo "No security issues found"
         fi
